@@ -1,0 +1,22 @@
+{
+  "include": ["./**/*.ts"],
+  "exclude": [],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es5",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["cypress", "@percy/cypress"],
+    "lib": ["es2015", "dom"],
+    "isolatedModules": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+  },
+}
