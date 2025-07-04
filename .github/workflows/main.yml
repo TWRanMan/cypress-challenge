@@ -21,6 +21,5 @@ jobs:
         with:
           build: npx cypress info
           browser: chrome
-          record: true
           spec: cypress/tests/ui/*
           config-file: cypress.config.ts
