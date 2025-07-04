@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  ui-tests:
+  ui-chrome-tests:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     container:
@@ -16,9 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - run: npx cypress info
-      - run: node --version
-      - run: npm install
-      
-      - name: Run Cypress tests
-        run: npx cypress run
+      - name: UI Functional Tests - Chrome 
+        uses: cypress-io/github-action@v6
+        with:
+          build: npx cypress info
+          browser: chrome
+          record: true
+          spec: cypress/tests/ui/*
+          config-file: cypress.config.ts
